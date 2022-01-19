@@ -17,7 +17,6 @@ const Advanced = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.r",
       id: 1,
       droped: false,
-      wrote: false,
     },
     {
       value: "",
@@ -28,7 +27,6 @@ const Advanced = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.e",
       id: 2,
       droped: false,
-      wrote: false,
     },
     {
       value: "",
@@ -39,7 +37,6 @@ const Advanced = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.w",
       id: 3,
       droped: false,
-      wrote: false,
     },
     {
       value: "",
@@ -50,7 +47,6 @@ const Advanced = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.q",
       id: 4,
       droped: false,
-      wrote: false,
     },
   ];
 

@@ -20,7 +20,14 @@ const InnerBoard = (props) => {
   };
   /*Add Rule*/
   const addRuleToBoard = (id) => {
-    props.setDropRules((dropedRules) => [...dropedRules, props.addRule(id)]);
+    props.some.forEach((e) => {
+      if (e.id === id && e.droped === false) {
+        props.setDropRules((dropedRules) => [
+          ...dropedRules,
+          props.addRule(id),
+        ]);
+      }
+    });
   };
   const innerClassf = () => {
     let result = "";

@@ -6,10 +6,6 @@ import { useEffect } from "react/cjs/react.development";
 const Board = (props) => {
   const [dropedRules, setDropRules] = useState([]);
   const [result, setResult] = useState("");
-  const [bool, setBool] = useState(false);
-  useEffect(() => {
-    setBool(!bool);
-  }, [dropedRules]);
   const outResult = () => {
     setResult("");
     dropedRules.forEach((e) => {
@@ -19,7 +15,7 @@ const Board = (props) => {
     });
   };
   useEffect(() => {
-    outResult("");
+    outResult();
   }, [dropedRules]);
   return (
     <div className="board">
@@ -29,6 +25,7 @@ const Board = (props) => {
         addRule={props.addRule}
         dropedRules={dropedRules}
         setDropRules={setDropRules}
+        some={props.some}
       />
     </div>
   );

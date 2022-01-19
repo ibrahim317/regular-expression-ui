@@ -2,10 +2,9 @@ import React from "react";
 
 const DropDownText = (props) => {
   return (
-    <div
+    <button
       className="dropDown"
       style={{
-        cursor: "pointer",
         display: "inline-block",
         color: "#67a5ce",
         marginLeft: "auto",
@@ -15,7 +14,7 @@ const DropDownText = (props) => {
       <div className={props.someClass} style={{ display: "none" }}>
         {props.content}
       </div>
-    </div>
+    </button>
   );
 };
 

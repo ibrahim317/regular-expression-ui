@@ -2,6 +2,7 @@ import React from "react";
 import { useDrag } from "react-dnd";
 import { ReactComponent as Dragicon } from "./drag.svg";
 import DropDownText from "./tools/DropDownText";
+import Textarea from "./tools/Textarea";
 const Rule = (props) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "rule",
@@ -38,7 +39,24 @@ const Rule = (props) => {
           icon="gg-more-vertical-alt"
           content={
             <>
-              <div style={{ height: "30px", margin: "15px" }}>Config</div>
+              <div
+                style={{
+                  height: "30px",
+                  margin: "15px",
+                }}
+              >
+                Config
+                {
+                  <DropDownText
+                    someClass="dropDown-content"
+                    content={
+                      <>
+                        <Textarea />
+                      </>
+                    }
+                  />
+                }
+              </div>
               <br></br>
               <div
                 onClick={() => props.deleteRule(props.rule.id)}

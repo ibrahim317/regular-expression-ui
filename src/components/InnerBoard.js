@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useDrop } from "react-dnd";
 import { useEffect } from "react";
 const InnerBoard = (props) => {
-  const [dropedRules, setDropRules] = useState([]);
   let [someClass, setSomeClass] = useState("");
   const [{ isOver, canDrop }, drop] = useDrop(() => ({
     accept: "rule",
@@ -16,20 +15,20 @@ const InnerBoard = (props) => {
   }));
   /*Delete rule*/
   const deleteRule = (id) => {
-    setDropRules((dropedRules) => dropedRules.filter((e) => id !== e.id));
-    console.log(dropedRules.filter((e) => e.id !== id));
+    props.ondelete(id);
+    props.setDropRules((dropedRules) => dropedRules.filter((e) => id !== e.id));
   };
   /*Add Rule*/
   const addRuleToBoard = (id) => {
-    setDropRules((dropedRules) => [...dropedRules, props.addRule(id)]);
+    props.setDropRules((dropedRules) => [...dropedRules, props.addRule(id)]);
   };
   const innerClassf = () => {
     let result = "";
-    if (!isOver && canDrop) {
+    if (isOver && canDrop) {
       result += " waiting ";
     }
 
-    dropedRules.length > 0
+    props.dropedRules.length > 0
       ? (result += " innerBoard ")
       : (result += " emptyBoard ");
 
@@ -38,7 +37,7 @@ const InnerBoard = (props) => {
   useEffect(() => {
     let innerClass = innerClassf();
     setSomeClass(innerClass);
-  }, [isOver, canDrop, dropedRules]);
+  }, [isOver, canDrop, props.dropedRules]);
 
   return (
     <div
@@ -46,8 +45,12 @@ const InnerBoard = (props) => {
       className={someClass}
       style={isOver && canDrop ? { border: "3px dashed #238fcc" } : {}}
     >
-      {dropedRules.length > 0 ? (
-        <Rules deleteRule={deleteRule} rules={dropedRules} droped={true} />
+      {props.dropedRules.length > 0 ? (
+        <Rules
+          deleteRule={deleteRule}
+          rules={props.dropedRules}
+          droped={true}
+        />
       ) : (
         <>
           <h2 style={{ display: "block " }}>Add Rule</h2>

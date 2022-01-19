@@ -105,6 +105,10 @@ Layouts
 Inner Items
 =========================
 */
+.waiting {
+  border: 3px dashed #238fcc;
+  background-color: rgb(238 246 255);
+}
 .result {
   min-height: 60px;
 }
@@ -172,13 +176,21 @@ Inner Items
   border-radius: 12px;
   color: black !important ;
 }
+.dropDown:focus .dropDown-content.options {
+  display: block !important;
+  border: none;
+}
+button {
+  border: none;
+  background-color: inherit;
+}
 .dropDown-content.information {
   min-width: 160px;
   max-width: 300px;
   background-color: var(--darkBk);
   color: white !important;
 }
-.dropDown:hover .dropDown-content {
+.dropDown:hover .dropDown-content.information {
   display: block !important;
 }
 

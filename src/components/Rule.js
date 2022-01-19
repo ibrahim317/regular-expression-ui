@@ -13,7 +13,7 @@ const Rule = (props) => {
   }));
   return (
     <div
-      ref={drag}
+      ref={!props.droped ? drag : null}
       className={!isDragging ? "rule" : "dragging-rule"}
       style={
         props.droped

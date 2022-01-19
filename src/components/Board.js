@@ -5,23 +5,25 @@ import { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 const Board = (props) => {
   const [dropedRules, setDropRules] = useState([]);
-  const [result, setResult] = useState("");
+  let [result, setResult] = useState("");
   const outResult = () => {
-    setResult("");
+    let tmpResult = "";
+    result = "";
     dropedRules.forEach((e) => {
       if (e.droped === true) {
-        setResult(result + e.value);
+        tmpResult += e.value;
       }
+      setResult(tmpResult);
     });
   };
   useEffect(() => {
     outResult();
-  }, [dropedRules]);
+  }, [dropedRules, props.some]);
   return (
     <div className="board">
       <Result result={result} />
       <InnerBoard
-        ondelete={props.ondelete}
+        ondelete={props.deleteRule}
         addRule={props.addRule}
         dropedRules={dropedRules}
         setDropRules={setDropRules}

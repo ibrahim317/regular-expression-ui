@@ -5,11 +5,14 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 
 const Advanced = () => {
+  /* ==============
+        Rules
+     ==============*/
   const some = [
     {
-      arg: "d;gasdhgas;dgas",
+      arg: "",
       get value() {
-        return `when(${this.arg})`;
+        return `When { ${this.arg} } `;
       },
       icon: "gg-remote",
       name: "Term",
@@ -19,7 +22,9 @@ const Advanced = () => {
       droped: false,
     },
     {
-      value: "",
+      get value() {
+        return `  Number{ ${this.arg} } `;
+      },
       arg: "",
       icon: "gg-hashtag",
       name: "Number",
@@ -29,7 +34,9 @@ const Advanced = () => {
       droped: false,
     },
     {
-      value: "",
+      get value() {
+        return ``;
+      },
       arg: "",
       icon: "gg-format-color",
       name: "Spacial Character",
@@ -39,8 +46,10 @@ const Advanced = () => {
       droped: false,
     },
     {
-      value: "",
-      arg: "",
+      get value() {
+        return ` is in proximity of { ${this.arg[0]} } Words of { ${this.arg[1]} }`;
+      },
+      arg: ["", ""],
       icon: "gg-arrows-merge-alt-h",
       name: "Proximity",
       description:
@@ -50,14 +59,18 @@ const Advanced = () => {
     },
   ];
 
+  /* Delete */
+
   const deleteRule = (id) => {
     some.forEach((e) => {
       if (e.id === id) {
-        e.wrote = false;
         e.droped = false;
       }
     });
   };
+
+  /* Add */
+
   const addRule = (id) => {
     some.forEach((e) => {
       if (e.id === id) {
@@ -67,6 +80,7 @@ const Advanced = () => {
     const dropdedRule = some.filter((rule) => rule.id === id);
     return dropdedRule[0];
   };
+
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="innerContainer">
@@ -79,7 +93,7 @@ const Advanced = () => {
         <div className="spliter"></div>
         <div className="secondcolumn">
           <h3>Rule Expression</h3>
-          <Board some={some} ondelete={deleteRule} addRule={addRule} />
+          <Board some={some} deleteRule={deleteRule} addRule={addRule} />
         </div>
       </div>
     </DndProvider>

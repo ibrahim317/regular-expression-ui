@@ -7,8 +7,8 @@ import { DndProvider } from "react-dnd";
 const Advanced = () => {
   const some = [
     {
-      icon: "i",
       value: "",
+      icon: "i",
       name: "Term",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.r",
@@ -16,8 +16,8 @@ const Advanced = () => {
       droped: false,
     },
     {
-      icon: "",
       value: "",
+      icon: "",
       name: "Number",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.e",
@@ -35,12 +35,12 @@ const Advanced = () => {
     },
     {
       value: "",
-      droped: false,
       icon: "",
       name: "Proximity",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.q",
       id: 4,
+      droped: false,
     },
   ];
   const addRule = (id) => {

@@ -14,9 +14,12 @@ const InnerBoard = (props) => {
       canDrop: !!monitor.canDrop(),
     }),
   }));
+  /*Delete rule*/
   const deleteRule = (id) => {
-    setDropRules((dropedRules) => dropedRules.filter((e) => e.id === id));
+    setDropRules((dropedRules) => dropedRules.filter((e) => id !== e.id));
+    console.log(dropedRules.filter((e) => e.id !== id));
   };
+  /*Add Rule*/
   const addRuleToBoard = (id) => {
     setDropRules((dropedRules) => [...dropedRules, props.addRule(id)]);
   };

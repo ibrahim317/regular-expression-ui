@@ -37,7 +37,7 @@ const Rule = (props) => {
               <div style={{ height: "30px", margin: "15px" }}>Config</div>
               <br></br>
               <div
-                onClick={() => props.deleteRule(props.id)}
+                onClick={() => props.deleteRule(props.rule.id)}
                 style={{ height: "30px", margin: "15px" }}
               >
                 Delete

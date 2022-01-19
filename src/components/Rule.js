@@ -21,6 +21,10 @@ const Rule = (props) => {
       }
     >
       <Dragicon />
+      <i
+        className={props.rule.icon}
+        style={{ marginRight: "9px", opacity: "0.57" }}
+      ></i>
       <div>{props.rule.name}</div>
       {!props.droped ? (
         <DropDownText

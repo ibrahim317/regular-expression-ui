@@ -8,7 +8,7 @@ const Advanced = () => {
   const some = [
     {
       value: "",
-      icon: "i",
+      icon: "gg-remote",
       name: "Term",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.r",
@@ -17,7 +17,7 @@ const Advanced = () => {
     },
     {
       value: "",
-      icon: "",
+      icon: "gg-hashtag",
       name: "Number",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.e",
@@ -26,7 +26,7 @@ const Advanced = () => {
     },
     {
       value: "",
-      icon: "",
+      icon: "gg-format-color",
       name: "Spacial Character",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.w",
@@ -35,7 +35,7 @@ const Advanced = () => {
     },
     {
       value: "",
-      icon: "",
+      icon: "gg-arrows-merge-alt-h",
       name: "Proximity",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue et metus ut rutrum. Fusce suscipit nisi et dictum egestas. Aliquam orci neque, rutrum et mattis sed, dapibus eget dolor.q",

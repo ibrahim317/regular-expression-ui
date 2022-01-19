@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css");
-@import url("https://css.gg/more-vertical-alt.css");
-@import url("https://css.gg/info.css");
-@import url("https://css.gg/controller.css");
-@import url("https://css.gg/dialpad.css");
+@import url("https://css.gg/css");
 :root {
   --light: #67a5ce;
   --text: #238fcc;

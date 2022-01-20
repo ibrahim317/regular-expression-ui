@@ -10,10 +10,10 @@ const Advanced = () => {
      ==============*/
   const some = [
     {
-      arg: "",
       get value() {
         return `When { ${this.arg} } `;
       },
+      arg: "",
       icon: "gg-remote",
       name: "Term",
       description:

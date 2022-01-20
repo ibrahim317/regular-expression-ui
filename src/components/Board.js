@@ -2,7 +2,7 @@ import React from "react";
 import Result from "./Result";
 import InnerBoard from "./InnerBoard";
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 const Board = (props) => {
   const [dropedRules, setDropRules] = useState([]);
   let [result, setResult] = useState("");

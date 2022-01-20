@@ -14,11 +14,7 @@ const Textarea = (props) => {
       {props.name !== "" ? (
         <>
           <label>{props.name}</label>
-          <input
-            type="text"
-            style={{ left: "-50px", width: `${props.width}` }}
-            placeholder={props.placeholder}
-          />
+          <input type="text" style={{}} placeholder={props.placeholder} />
         </>
       ) : (
         <>

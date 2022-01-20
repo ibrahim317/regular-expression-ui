@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className="header">
       <h3>Create Rule for "{props.CategoryName}" Category </h3>
-      <Textarea placeholder="Billing_Accuarcy" name="Rule Name" width="300" />
+      <Textarea placeholder="Billing_Accuarcy" name="Rule Name" width="250px" />
       <div style={{ display: "inline-block" }}>
         <InputRaido
           name=" Basic"

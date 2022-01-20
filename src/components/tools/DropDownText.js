@@ -3,14 +3,14 @@ import React from "react";
 const DropDownText = (props) => {
   return (
     <button
-      className="dropDown"
+      className={props.parentClass}
       style={{
         display: "inline-block",
         color: "#67a5ce",
         marginLeft: "auto",
       }}
     >
-      <i className={props.icon}></i>
+      <i className={props.icon} style={{ marginLeft: "5px" }}></i>
       <div className={props.someClass} style={{ display: "none" }}>
         {props.content}
       </div>

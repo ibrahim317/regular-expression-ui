@@ -15,6 +15,7 @@ const InputRaido = (props) => {
         <input
           style={radioStyling}
           type="radio"
+          className="io"
           checked={props.Checked}
           onChange={props.onBasic}
           name="radio"

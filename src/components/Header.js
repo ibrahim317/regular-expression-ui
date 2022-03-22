@@ -18,6 +18,7 @@ const Header = (props) => {
           onBasic={props.onAdvance}
         />
       </div>
+      <hr />
     </div>
   );
 };

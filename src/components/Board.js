@@ -3,6 +3,7 @@ import Result from "./Result";
 import InnerBoard from "./InnerBoard";
 import { useState } from "react";
 import { useEffect } from "react";
+
 const Board = (props) => {
   const [dropedRules, setDropRules] = useState([]);
   let [result, setResult] = useState("");
@@ -18,7 +19,7 @@ const Board = (props) => {
   };
   useEffect(() => {
     outResult();
-  }, [dropedRules, props.some]);
+  }, [dropedRules]);
   return (
     <div className="board">
       <Result result={result} />

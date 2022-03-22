@@ -4,6 +4,7 @@ import DropDown from "./tools/DropDown";
 import { ReactComponent as Dragicon } from "./drag.svg";
 import DropDownText from "./tools/DropDownText";
 import Textarea from "./tools/Textarea";
+
 const Rule = (props) => {
   const [configing, setConfiging] = useState(false);
   const [configClass, setConfigClass] = useState("");

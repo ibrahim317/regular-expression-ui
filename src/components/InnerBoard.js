@@ -1,50 +1,60 @@
 import React from "react";
 import Rules from "./Rules";
+import remove from "../actions/remove";
+import addRuleToUI from "../actions/addRuleToUI";
+import BoardText from "./tools/Empty";
 import { useState } from "react";
 import { useDrop } from "react-dnd";
 import { useEffect } from "react";
-const InnerBoard = (props) => {
-  let [someClass, setSomeClass] = useState("");
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+const InnerBoard = () => {
+  const [test, setTest] = useState("");
+  const [someClass, setSomeClass] = useState("");
+  const dropdedRulesList = useSelector((state) => state.dropedRules);
+  const dispatch = useDispatch();
+
+  /*Add Rule*/
+
+  const addRuleToBoard = (rule) => {
+    dispatch(addRuleToUI(rule));
+  };
+
+  /*Delete rule*/
+  const deleteRule = (id) => {
+    dispatch(remove(id));
+    setTest((local) => local + "a");
+  };
+
+  /* Handle droping items on the innerBoard  */
   const [{ isOver, canDrop }, drop] = useDrop(() => ({
     accept: "rule",
-    drop: (item) => addRuleToBoard(item.id),
+    drop: (item) => {
+      return addRuleToBoard(item);
+    },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
       canDrop: !!monitor.canDrop(),
     }),
   }));
-  /*Delete rule*/
-  const deleteRule = (id) => {
-    props.ondelete(id);
-    props.setDropRules((dropedRules) => dropedRules.filter((e) => id !== e.id));
-  };
-  /*Add Rule*/
-  const addRuleToBoard = (id) => {
-    props.some.forEach((e) => {
-      if (e.id === id && e.droped === false) {
-        props.setDropRules((dropedRules) => [
-          ...dropedRules,
-          props.addRule(id),
-        ]);
-      }
-    });
-  };
+
   const innerClassf = () => {
     let result = "";
     if (isOver && canDrop) {
       result += " waiting ";
     }
 
-    props.dropedRules.length > 0
+    dropdedRulesList.length > 0
       ? (result += " innerBoard ")
       : (result += " emptyBoard ");
 
     return result;
   };
   useEffect(() => {
-    let innerClass = innerClassf();
+    const innerClass = innerClassf();
     setSomeClass(innerClass);
-  }, [isOver, canDrop, props.dropedRules]);
+  }, [isOver, canDrop, dropdedRulesList]);
 
   return (
     <div
@@ -52,20 +62,10 @@ const InnerBoard = (props) => {
       className={someClass}
       style={isOver && canDrop ? { border: "3px dashed #238fcc" } : {}}
     >
-      {props.dropedRules.length > 0 ? (
-        <Rules
-          deleteRule={deleteRule}
-          rules={props.dropedRules}
-          droped={true}
-        />
+      {dropdedRulesList.length > 0 ? (
+        <Rules rules={dropdedRulesList} deleteRule={deleteRule} droped={true} />
       ) : (
-        <>
-          <h2 style={{ display: "block " }}>Add Rule</h2>
-          <p>
-            <strong>Drag & Drop </strong> a rule from the avaliable rules area
-            to start defining your advance rule
-          </p>
-        </>
+        <BoardText />
       )}
     </div>
   );

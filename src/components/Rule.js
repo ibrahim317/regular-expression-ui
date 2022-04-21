@@ -10,7 +10,7 @@ const Rule = (props) => {
   const [configClass, setConfigClass] = useState("");
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "rule",
-    item: { id: props.rule.id },
+    item: props.rule,
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -71,7 +71,7 @@ const Rule = (props) => {
               <>
                 <div
                   className="config-button"
-                  onClick={() => setConfiging(true)}
+                  onClick={() => setConfiging((s) => !s)}
                 >
                   Config
                 </div>

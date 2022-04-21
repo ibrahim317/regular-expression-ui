@@ -1,10 +1,17 @@
-import React from "react";
+import { useState } from "react";
+import store from "../reducers/store";
+const Result = () => {
+  const [result, setResult] = useState("");
 
-const Result = (props) => {
+  store.subscribe(() => {
+    const res = store.getState().resultString;
+    setResult(res);
+  });
+
   return (
     <>
       <div className="result">
-        <h4>{props.result}</h4>
+        <h4>{result}</h4>
       </div>
       <hr />
     </>

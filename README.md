@@ -3,7 +3,7 @@
 This was ticket in a large project that i made for [Upland Sotware](https://uplandsoftware.com/)
 .And the ticket was to create a react drag-and-drop design that was meant to be like that:👇👇
 
-![design]https://assets.v7-io.invisionapp.com/assets/A_MGFjZjlkZDY2YjhlM2JmOR3wVarl7kvxotTpEjYYdlhloOtsyst9oBVxE2dj8h5X9gf3m1PF3y9pwuIrC4XTjzkrD6_Latv2iPCoT18DEstm5r7ldPeYC3TQN3Fg0njg?format=auto) 
+![design](https://assets.v7-io.invisionapp.com/assets/A_MGFjZjlkZDY2YjhlM2JmOR3wVarl7kvxotTpEjYYdlhloOtsyst9oBVxE2dj8h5X9gf3m1PF3y9pwuIrC4XTjzkrD6_Latv2iPCoT18DEstm5r7ldPeYC3TQN3Fg0njg?format=auto) 
 
 # Getting Started with Create React App
 

@@ -8,10 +8,16 @@ This was ticket in a large project that i made for [Upland Sotware](https://upla
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install npm
+ npm stands for "Node Package Manager." It is a package manager for JavaScript and Node.js applications. npm is used to manage the installation, versioning, and dependency management of various packages and libraries that are required to develop Node.js applications. These packages can include libraries, frameworks, tools, and other code that can be easily integrated into your projects.
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+## `npm install`
+
+To install both regular dependencies and dev dependencies.
 
 ### `npm start`
 

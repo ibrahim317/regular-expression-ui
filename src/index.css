@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css");
+
 @import url("https://css.gg/css");
 :root {
   --light: #67a5ce;
@@ -24,9 +25,13 @@ Layouts
 =========================
 
 */
+div{
+	display:inline;
+}
 .container {
   /*margin: 90px auto;*/
   display: flex;
+  margin: 6%;
   flex-direction: column;
   max-width: 90vw;
   min-width: 70vw;

@@ -20,7 +20,7 @@ const Basic = () => {
 
       <div className="outer">
         <label>Find words that</label>
-        <DropDown values={some} />
+        <DropDown search={false} values={some} placeholder="" />
         <Textarea height="39px" />
         <label className="marginAround">and are within</label>
         <DropDown placeholder="-" search={true} values={num} />

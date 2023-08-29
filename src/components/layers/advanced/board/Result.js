@@ -1,5 +1,5 @@
 import { useState } from "react";
-import store from "../reducers/store";
+import store from "../../../../reducers/store";
 const Result = () => {
   const [result, setResult] = useState("");
 

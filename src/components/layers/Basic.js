@@ -1,6 +1,6 @@
 import React from "react";
-import Textarea from "./tools/Textarea";
-import DropDown from "./tools/DropDown";
+import Textarea from "../tools/Textarea";
+import DropDown from "../tools/DropDown";
 import { Checkbox } from "semantic-ui-react";
 const Basic = () => {
   const some = [

@@ -1,6 +1,6 @@
 import React from "react";
-import Board from "./Board.js";
-import Rules from "./Rules.js";
+import Board from "./board/Board.js";
+import Rules from "./rules/Rules.js";
 import { useSelector } from "react-redux";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";

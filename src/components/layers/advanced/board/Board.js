@@ -1,6 +1,6 @@
 import React from "react";
 import Result from "./Result";
-import InnerBoard from "./InnerBoard";
+import InnerBoard from "./inner_board/InnerBoard.js";
 
 const Board = () => {
   return (

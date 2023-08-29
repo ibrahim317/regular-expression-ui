@@ -1,5 +1,5 @@
-import InputRaido from "./tools/InputRaido";
-import Textarea from "./tools/Textarea";
+import InputRaido from "../tools/InputRaido";
+import Textarea from "../tools/Textarea";
 
 const Header = (props) => {
   return (

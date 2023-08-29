@@ -1,8 +1,8 @@
 import React from "react";
-import Rules from "./Rules";
-import remove from "../actions/remove";
-import addRuleToUI from "../actions/addRuleToUI";
-import BoardText from "./tools/Empty";
+import Rules from "../../rules/Rules.js";
+import remove from "../../../../../actions/remove";
+import addRuleToUI from "../../../../../actions/addRuleToUI";
+import BoardText from "../../../../tools/Empty";
 import { useState } from "react";
 import { useDrop } from "react-dnd";
 import { useEffect } from "react";
